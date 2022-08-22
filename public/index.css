@@ -9,6 +9,8 @@ body {
 }
 
 .main {
+  padding: 30px;
+  padding-top: 140px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,16 +19,73 @@ body {
   row-gap: 30px;
 }
 
+.controls {
+  width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.controlButton {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#activeForm {
+  width: 72px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #333333;
+  background-color: #e57f1f4d;
+  position: absolute;
+  left: 0;
+  transition: left 300ms;
+}
+
+.formsSection {
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #f4e5d7;
+  overflow: hidden;
+}
+
+.formSection__form {
+  position: relative;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top 300ms;
+}
+
 .main__title {
+  position: absolute;
+  top: 50px;
+  font-size: 2.5rem;
+}
+
+.main__title,
+.productsSection__productsTitle {
   color: #f4e5d7;
+}
+
+.form__title {
+  margin-top: 20px;
 }
 
 .form {
   width: 400px;
+  height: 280px;
+  margin-bottom: 30px;
   max-width: 90%;
-  background-color: #f4e5d7;
   padding: 30px;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,4 +117,62 @@ body {
   box-shadow: inset -200px 0px #fff;
   background-color: #e57e1f;
   color: #333333;
+}
+
+.productsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productsSection__header {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.productsSection__productsTitle {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.productsSection__refreshButton {
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #e57e1f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.productsSection__productsContainer {
+  width: 700px;
+  max-width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.productsSection__product {
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #333333;
+}
+
+.productsSection__productIMG {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background-color: #434242;
+  border: 1px solid #333333;
+  border-radius: 10px;
 }
