@@ -17,10 +17,14 @@ form.addEventListener("submit", async (e) => {
       }),
       headers: { "Content-Type": "application/json" },
     });
-    console.log(response)
+    console.log(response);
     // Deja la data en el formulario si hay un error
     form.reset();
   } catch (err) {
     return new Error(err);
   }
 });
+
+function preventDef(e) {
+  e.preventDefault();
+}

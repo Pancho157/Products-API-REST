@@ -5,7 +5,7 @@ async function getProducts() {
     const response = await fetch("/api/productos", {
       method: "GET",
     });
-    console.log(response.data);
+    console.log(response);
   } catch (err) {
     return new Error(err);
   }
